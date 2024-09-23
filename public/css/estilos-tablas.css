@@ -1,0 +1,84 @@
+:root{
+    --color-thead: rgba(2, 53, 95, 0.842);
+    --color-texto-thead:white;
+    --color-texto-tbody:rgba(94, 92, 92, 0.884);
+    --columna-botones:5;
+
+}
+
+body{
+    background-color: #ddd;
+}
+.titulo-tabla{
+    text-align: center;
+    margin: 30px;
+}
+table {
+    width: 80%;
+    min-width: 600px; /* Establece el ancho mínimo de la tabla */
+    margin:auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+thead {
+    background-color: var(--color-thead);
+    color: var(--color-texto-thead);
+}
+
+th, td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+tbody td:nth-child(3) img{
+    width: 50px;
+    height: auto;    
+    margin-left: 5px;
+    transition: 0.3s ease;
+}
+tbody td:nth-child(5) img{
+    width: 30px;
+    height: auto;    
+    margin-left: 5px;
+    transition: 0.3s ease;
+}
+tbody td:nth-child(5) input{
+    width: 30px;
+    height: auto;    
+    margin-left: 5px;
+    transition: 0.3s ease;
+}
+tbody td:nth-child(5) form{
+   
+    display: inline-block;
+    height: auto;  }  
+    
+tbody td:nth-child(5) img:hover{
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.568);
+    height: auto;
+    
+    margin-left: 5px;
+}
+tbody td:nth-child(5) input:hover{
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.568);
+    height: auto;
+    
+    margin-left: 5px;
+}
+tbody td:nth-child(5) a{
+    text-decoration: none;
+}
+
+
+tbody tr:nth-child(5) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #eeeeee;
+}

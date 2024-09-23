@@ -114,7 +114,14 @@ body{
     font-size: 30px;
     color: black;
 }
-
+/* contenedor formulario */
+.container-formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    
+}
 /* cards */
 
 .container-cards{

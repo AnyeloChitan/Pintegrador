@@ -13,9 +13,9 @@ class CategoriaController extends Controller
     public function index()
     {
         //
-        $categorias=Categoria::all();
+        $categorias=Categoria::orderBy('id','ASC')->paginate(10);
 
-        return["categorias"=>$categorias];
+        return view ('categoria.index', compact('categorias'));
     }
 
     /**
@@ -24,6 +24,7 @@ class CategoriaController extends Controller
     public function create()
     {
         //
+        return view('categoria.create');
     }
 
     /**
@@ -31,7 +32,24 @@ class CategoriaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+         // Validar los datos del formulario
+         $validatedData = $request->validate([
+            'nombre' => 'required|max:255',
+            'descripcion' => 'nullable',
+            'status' => 'required|boolean',
+        ]);
+
+        // Crear una nueva instancia de Categoria
+        $categoria = new Categoria();
+        $categoria->nombre = $validatedData['nombre'];
+        $categoria->descripcion = $validatedData['descripcion'];
+        $categoria->status = $validatedData['status'];
+
+        // Guardar la categoría en la base de datos
+        $categoria->save();    
+        // Redirigir a la lista de categorías con un mensaje de éxito
+        return redirect()->route('categoria.index');
+
     }
 
     /**
@@ -45,9 +63,11 @@ class CategoriaController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Categoria $categoria)
+    public function edit($id)
     {
         //
+        $categoria=Categoria::findOrFail($id);
+        return view("categoria.edit",["categoria"=>$categoria]);
     }
 
     /**

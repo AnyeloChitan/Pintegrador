@@ -8,6 +8,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/styles.css')}}">
+    <link rel="stylesheet" href="{{asset('css/estilos-tablas.css')}}">
+    <link rel="stylesheet" href="{{asset('css/estilos-formularios.css')}}">
 </head>
 <body>
   <!-- slidebar   -->
@@ -22,6 +24,19 @@
         <div class="element-slidebar-content">
             <a href="">Perfil</a>
             <a href="">Logout</a>
+
+        </div>
+    </div>
+    <!-- categorias-->
+    
+    <div class="element-slidebar">
+        <div class="element-slidebar-btn">
+         <span><img src="{{asset('img/icono1.png')}}" alt="Product"></span>
+         <p>Categorias</p>
+        </div>
+        <div class="element-slidebar-content">
+            <a href="{{route('categoria.index')}}">Todos</a>
+            <a href="{{route('categoria.create')}}">Agregar</a>
 
         </div>
     </div>
