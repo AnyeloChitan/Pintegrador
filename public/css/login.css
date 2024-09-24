@@ -1,0 +1,121 @@
+:root{
+    --color-fondo: linear-gradient(to right,rgba(2, 53, 95, 0.842),rgba(0, 0, 0));
+    --color-texto-poster: white;
+    --color-texto-formulario:rgba(48, 40, 40, 0.651);
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background: var(--color-fondo);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contenedor{
+    display: flex;
+    width: 70%;
+    max-width: 600px;
+    height: 70%;
+    max-height: 500px;
+    margin: 0 auto 0;
+    gap: 10px;
+    border-radius: 10px;
+    background-color: white;
+
+}
+.contenedor-poster{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+    margin: 0;
+    border-radius: 10px;
+    color: var(--color-texto-poster);
+    background: url(../img/fondoposter.jpg) no-repeat center center/cover;
+}
+.contenedor-poster h1{
+    font-size: 40px;
+    font-weight: bolder;
+}
+.contenedor-poster p{
+    font-size: 20px;
+    font-weight: bolder;
+}
+.contenedor-formulario{
+    width: 50%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor-formulario form{
+    width: 90%;
+}
+.contenedor-formulario h2{
+    margin-bottom: 20px;
+    font-weight: bolder;
+}
+.contenedor-formulario input{
+    display: block;
+    border-radius: 4px;
+    width: 90%;
+    margin: 10px auto;
+    padding: 8px;
+    border: 1px solid var(--color-texto-formulario);
+}
+.contenedor-formulario .btn{
+    background-color: rgba(0, 0, 0, 0.959);
+    color: var(--color-texto-poster);
+    transition: 0.3s ease;
+}
+.contenedor-formulario .btn:hover{
+    background-color: rgba(48, 45, 45, 0.705);
+    color: var(--color-texto-poster);
+}
+
+.opciones-login{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    padding: 0 10px;
+}
+.opciones-login label{
+    display: inline-flex;
+    align-items: center;
+}
+.opciones-login input[type="checkbox"]{
+    margin-right: 8px;
+}
+.contenedor a{
+    text-decoration: none;
+    font-size: 12px;
+    margin-left: 5px;
+
+}
+.contenedor a:hover{
+    color: rgba(0, 0, 255, 0.603);
+}
+.contenedor span{
+    font-size: 12px;
+}
+@media(max-width:767px){
+    .contenedor-poster{
+        display: none;
+    }
+    .contenedor-formulario{
+        width: 100%;
+    }
+    .contenedor{
+        max-width: 360px;
+    }
+}

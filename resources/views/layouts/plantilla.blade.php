@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="{{asset('css/styles.css')}}">
     <link rel="stylesheet" href="{{asset('css/estilos-tablas.css')}}">
     <link rel="stylesheet" href="{{asset('css/estilos-formularios.css')}}">
+      <!-- Scripts -->
+      @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
   <!-- slidebar   -->
@@ -18,12 +20,17 @@
     <!-- PERFIL -->
     <div class="element-slidebar">
         <div class="element-slidebar-btn profile">
-         <span><img src="img/face2.jpg" alt="avatar"></span>
-         <p>Admin</p>
+         <span><img src="{{asset('img/face2.jpg')}}" alt="avatar"></span>
+         <p>{{Auth::user()->name}}</p>
         </div>
         <div class="element-slidebar-content">
-            <a href="">Perfil</a>
-            <a href="">Logout</a>
+            <a href="{{route('profile.edit')}}">Perfil</a>
+            
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+
+                <input type="submit" value="Salir"class="logout-link">
+            </form>
 
         </div>
     </div>
@@ -44,19 +51,19 @@
     
     <div class="element-slidebar">
         <div class="element-slidebar-btn">
-         <span><img src="img/rokrt.png" alt="Product"></span>
+         <span><img src="{{asset('img/rokrt.png')}}" alt="Product"></span>
          <p>Productos</p>
         </div>
         <div class="element-slidebar-content">
-            <a href="{{route('productos')}}">Todos</a>
-            <a href="{{url ('/productos/agregar')}}">Agregar</a>
+            <a href="">Todos</a>
+            <a href="">Agregar</a>
 
         </div>
     </div>
     <!-- Provedores -->
     <div class="element-slidebar">
         <div class="element-slidebar-btn">
-         <span><img src="img/provedores.png" alt="Provedor"></span>
+         <span><img src="{{asset('img/provedores.png')}}" alt="Provedor"></span>
          <p>Provedores</p>
         </div>
         <div class="element-slidebar-content">
@@ -68,7 +75,7 @@
     <!-- Compras -->
     <div class="element-slidebar">
         <div class="element-slidebar-btn">
-         <span><img src="img/compras.png" alt="Product"></span>
+         <span><img src="{{asset('img/compras.png')}}" alt="Product"></span>
          <p>Compras</p>
         </div>
         <div class="element-slidebar-content">
@@ -80,7 +87,7 @@
         <!-- Ventas -->
         <div class="element-slidebar">
             <div class="element-slidebar-btn">
-             <span><img src="img/ventas.png" alt="ventas"></span>
+             <span><img src="{{asset('img/ventas.png')}}" alt="ventas"></span>
              <p>Ventas</p>
             </div>
             <div class="element-slidebar-content">

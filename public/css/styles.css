@@ -70,6 +70,17 @@ body{
     font-size: 16px;
 }
 
+/* formulario salir en plantilla  */
+.element-slidebar-content .logout-link{
+    display: block;
+   background: none;
+   border: none;
+    color: aliceblue;
+    margin: 20px;
+    font-size: 16px;
+}
+
+
 .profile img{   
     border-radius: 50%;
     width: 40px;
