@@ -43,8 +43,10 @@
         </div>
         <div class="element-slidebar-content">
             <a href="{{route('categoria.index')}}">Todos</a>
-            <a href="{{route('categoria.create')}}">Agregar</a>
 
+            @can('categoria.create')
+            <a href="{{route('categoria.create')}}">Agregar</a>
+            @endcan
         </div>
     </div>
     <!-- Productos -->

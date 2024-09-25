@@ -32,6 +32,7 @@
                  <a href="{{route('categoria.destroy',[$categoria->id])}}">
                     
                  </a>
+                 @can('categoria.destroy')
                  <form action="{{route('categoria.destroy',[$categoria->id])}}" method="POST" onsubmit="return confimarEliminacion()">
 
                     {{-- permite gemrar el token para enviar por post --}}
@@ -41,6 +42,7 @@
                     <input type="image"src="img/delete.png"></input>
 
                  </form>
+                 @endcan
                  <script>
                     function confimarEliminacion() {
                         return confirm('¿Seguro deseas eliminar?'); // Muestra el mensaje de confirmación
