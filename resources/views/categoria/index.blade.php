@@ -14,7 +14,7 @@
                 <th>Opciones</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="tabla-categorias">
             @foreach ($categorias as $categoria)
             <tr>                
                 <td>{{$categoria->id}}</td>
@@ -52,6 +52,8 @@
             </tr>
             @endforeach           
         </tbody>
+        {{-- paginacion links --}}
+       
     </table>
 
    </section>

@@ -23,7 +23,7 @@ class CategoriaController extends Controller
     public function index()
     {
         //
-        $categorias=Categoria::orderBy('id','ASC')->paginate(10);
+        $categorias=Categoria::orderBy('id','ASC')->paginate(5);
 
         return view ('categoria.index', compact('categorias'));
     }

@@ -27,7 +27,7 @@
     font-weight: bold;
 }
 
-.form-group input[type="text"],
+.form-group input,
 .form-group textarea,
 .form-group select {
     width: 100%;

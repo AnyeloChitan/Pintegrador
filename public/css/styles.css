@@ -10,10 +10,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+   
 }
 body{
     font-family: "Roboto",sans-serif ;
     color: var(--color-texto);
+    background:white;
 }
 
 /* slidebar */
@@ -69,18 +71,16 @@ body{
     margin: 20px;
     font-size: 16px;
 }
-
-/* formulario salir en plantilla  */
+/* logout-link */
 .element-slidebar-content .logout-link{
     display: block;
-   background: none;
-   border: none;
+    background: none;
+    border: none;
+    text-decoration: none;
     color: aliceblue;
     margin: 20px;
     font-size: 16px;
 }
-
-
 .profile img{   
     border-radius: 50%;
     width: 40px;
@@ -104,10 +104,17 @@ body{
 .main{
     margin-left: 250px;
     background-color: var(--color-main);   
-    height: 100vh;
+   
 }
 .container-tabla{
     overflow-y: scroll;
+}
+.container-formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    
 }
 /* header */
 .header{
@@ -125,14 +132,6 @@ body{
     font-size: 30px;
     color: black;
 }
-/* contenedor formulario */
-.container-formulario{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    
-}
 /* cards */
 
 .container-cards{
@@ -143,6 +142,23 @@ body{
     padding-bottom: 10px;
 
 }
+.card-show{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    text-align:left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4)
+}
+
+.card-show img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
 
 .card{
     background-color: white;
@@ -150,6 +166,9 @@ body{
     border-radius: 10px;
     text-align: center;
 }
+
+
+
 
 .cabecera{
     display: flex;

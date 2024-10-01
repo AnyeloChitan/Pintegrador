@@ -33,49 +33,51 @@ th, td {
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
-tbody td:nth-child(3) img{
+.tabla-productos td:nth-child(3) img {
     width: 50px;
     height: auto;    
     margin-left: 5px;
     transition: 0.3s ease;
 }
-tbody td:nth-child(5) img{
+.tabla-productos td:nth-child(8) img, .tabla-categorias td:nth-child(5) img{
     width: 30px;
     height: auto;    
     margin-left: 5px;
     transition: 0.3s ease;
 }
-tbody td:nth-child(5) input{
+.tabla-productos td:nth-child(8) input, .tabla-categorias td:nth-child(5) input{
     width: 30px;
     height: auto;    
     margin-left: 5px;
     transition: 0.3s ease;
+    
 }
-tbody td:nth-child(5) form{
+.tabla-productos td:nth-child(8) form, .tabla-categorias td:nth-child(5) form{
    
     display: inline-block;
     height: auto;  }  
     
-tbody td:nth-child(5) img:hover{
+.tabla-productos td:nth-child(8) img:hover, .tabla-categorias td:nth-child(5) img:hover{
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.568);
     height: auto;
     
     margin-left: 5px;
 }
-tbody td:nth-child(5) input:hover{
+.tabla-productos td:nth-child(8) input:hover, .tabla-categorias td:nth-child(5) input:hover{
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.568);
     height: auto;
     
     margin-left: 5px;
 }
-tbody td:nth-child(5) a{
+.tabla-productos td:nth-child(8) a, .tabla-categorias td:nth-child(5) a{
     text-decoration: none;
+    display: inline-block;
 }
 
 
-tbody tr:nth-child(5) {
+.tabla-productos tr:nth-child(8),.tabla-categorias tr:nth-child(5) {
     background-color: #f2f2f2;
 }
 
