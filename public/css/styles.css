@@ -136,7 +136,7 @@ body{
 
 .container-cards{
     display: grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:10px;
     margin: 20px;
     padding-bottom: 10px;
@@ -189,6 +189,136 @@ body{
     gap:10px;
     margin: 20px;
     height: 380px;
+}
+/* Estilos para la clase logo */
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 40px;
+  }
+  
+  .logo-img {
+    width: 80px; /* Ajusta el tamaño del logo */
+    height: 80px;
+    margin-bottom: 10px;
+  }
+  
+  .logo-text {
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .logo:hover .logo-text {
+    color: #ddd;
+  }
+  
+  .logo:hover .logo-img {
+    transform: scale(1.1);
+  }
+  
+  .logo-img, .logo-text {
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+    /* Estilos generales del nav botones */
+    .nav-botones {
+        width: 80%;
+        margin: auto;
+       
+    }
+
+    /* Alinear los botones a la izquierda */
+    .nav-menu {
+        list-style: none;
+        margin: 0 0 20px 0;
+        padding: 0;
+        display: flex;
+        justify-content: flex-start; /* Alinea los botones a la izquierda */
+    }
+
+    /* Espacio entre los botones */
+    .nav-item {
+        margin-right: 20px;
+    }
+
+    /* Estilo de los enlaces (botones) */
+    .nav-link {
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        background-color: #007bff;
+        transition: background-color 0.3s ease;
+    }
+
+    .nav-link:hover {
+        background-color: #0056b3;
+    }
+
+    /* Botón de Generar PDF en verde */
+    .btn-generar-pdf {
+        background-color: #28a745;
+    }
+
+    .btn-generar-pdf:hover {
+        background-color: #218838;
+    }
+
+    /* Botón de Agregar Producto en azul claro */
+    .btn-agregar-producto {
+        background-color: #17a2b8;
+    }
+
+    .btn-agregar-producto:hover {
+        background-color: #138496;
+    }
+ /* Estilos para la paginación */
+.pagination {
+    display: flex;
+    justify-content: flex-end; /* Alinear a la derecha */
+    list-style: none; /* Eliminar los puntos de la lista */
+    padding: 0;
+    margin: 10px 0; /* Espacio alrededor de la paginación */
+}
+
+.pagination li {
+    margin: 0 5px; /* Espaciado entre los botones de paginación */
+}
+
+.pagination li a,
+.pagination li span {
+    display: block; /* Hacer que el enlace ocupe todo el espacio del li */
+    padding: 5px 10px; /* Espaciado interno */
+    background-color: #f3f4f6; /* Color de fondo por defecto */
+    color: #4a5568; /* Color del texto */
+    border: 1px solid #cbd5e0; /* Borde */
+    border-radius: 4px; /* Esquinas redondeadas */
+    text-decoration: none; /* Eliminar subrayado */
+    transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+}
+
+/* Estilo para el enlace activo */
+.pagination li.active span {
+    background-color: #2d3748; /* Color de fondo más oscuro para el activo */
+    color: #fff; /* Color del texto en blanco */
+    border: 1px solid #2d3748; /* Mantener el borde del mismo color que el fondo */
+}
+
+/* Estilo para los enlaces deshabilitados */
+.pagination li.disabled span {
+    background-color: #e2e8f0; /* Color de fondo para deshabilitados */
+    color: #a0aec0; /* Color del texto deshabilitado */
+    border: 1px solid #cbd5e0; /* Borde para deshabilitados */
+}
+
+/* Cambiar el color de fondo al pasar el mouse */
+.pagination li a:hover {
+    background-color: #edf2f7; /* Color de fondo al pasar el mouse */
+    color: #2d3748; /* Color del texto al pasar el mouse */
 }
 
 @media(max-width:767px){

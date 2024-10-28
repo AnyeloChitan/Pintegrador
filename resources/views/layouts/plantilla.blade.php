@@ -9,12 +9,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/styles.css')}}">
     <link rel="stylesheet" href="{{asset('css/estilos-tablas.css')}}">
+    <link rel="stylesheet" href="{{asset('css/estilos-venta.css')}}">
     <link rel="stylesheet" href="{{asset('css/estilos-formularios.css')}}">
+     <!-- Scripts -->
+     {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
 </head>
 <body>
   <!-- slidebar   -->
    <aside class="slidebar" id="slidebar">
-    <h2>Mi tienda</h2>
+   
+    <a href="{{route('dashboard')}}" class="logo">
+        <img src="{{asset('img/cangrejo.png')}}" alt="Logo" class="logo-img">
+        <p class="logo-text">Tienda</p>
+      </a>
+    
     <!-- PERFIL -->
     <div class="element-slidebar">
         <div class="element-slidebar-btn profile">
@@ -92,8 +100,8 @@
              <p>Ventas</p>
             </div>
             <div class="element-slidebar-content">
-                <a href="">Todos</a>
-                <a href="">Agregar</a>
+                <a href="{{route('venta.index')}}">Todos</a>
+                <a href="{{route('venta.create')}}">Nueva venta</a>
     
             </div>
         </div>
@@ -112,6 +120,7 @@
       @yield('contenido')
 
    </main>
+   <script src="{{asset('js/ventas.js')}}"></script>
     <script src="{{asset('js/script.js')}}"></script>
 </body>
 </html>

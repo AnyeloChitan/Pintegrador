@@ -14,4 +14,9 @@ class Producto extends Model
     public function categoria(){
         return $this->belongsTo(Categoria::class,'id_categoria');
     }
+
+    //realacion con detalle-venta
+    public function detalles(){
+        return $this->hasMany(Detalle_venta::class);
+    }
 }

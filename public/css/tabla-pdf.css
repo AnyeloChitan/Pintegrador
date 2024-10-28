@@ -1,0 +1,88 @@
+/* Estilos básicos para la tabla en PDF */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body{
+    height: 100vh;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+
+    
+}
+
+.pdf .container-tabla {
+    max-width: 800px;
+    margin: auto;
+}
+
+.pdf h2.titulo-tabla {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.pdf table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.pdf th, .pdf td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.pdf th {
+    background-color: #e287e2;
+}
+.header {
+    display: flex;
+    align-items: center; /* Alinea verticalmente en el centro */
+    justify-content: space-between; /* Distribuye el espacio entre los extremos */
+    margin-bottom: 20px;
+    margin-top: 30px;
+    border: 1px solid #ccc;
+}
+
+.header-left {
+    display: inline-block;
+    text-align: left;
+    
+   
+}
+
+.header-left h1 {
+
+    margin: 0; /* Elimina margen superior e inferior */
+    margin-right: 250px; /* Espacio entre el título y el logo */
+    margin-left: 20px;
+    padding-bottom: 20px;
+   
+}
+
+.header-right {
+    display: inline-block;
+    margin-top: 30px;
+    text-align: top;
+   
+}
+
+.header img {
+    width: 60px; /* Ajusta el tamaño del logo según sea necesario */
+    margin-right: 20px; /* Espacio entre el logo y el nombre */
+    padding-right: 10px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
